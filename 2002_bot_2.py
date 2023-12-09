@@ -165,6 +165,7 @@ async def description(ctx):
 @client.command()
 @commands.is_owner()
 async def shutdown(context):
+    await context.send("I have gone to sleep... zzZZ...")
     exit()
 
 
@@ -187,5 +188,4 @@ async def on_message(message):
     await message.channel.send(answer)
 
 
-# load data in a stats table
 client.run(TOKEN)
